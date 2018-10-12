@@ -1,0 +1,32 @@
+.sidebar-container {
+  background: #f8f8f8;
+  transition: width .6s;
+  // box-shadow: 0 0 5px #ddd;
+  border-right: 1px solid #d2d6de;
+  &.is-active {
+    width: 64px !important;
+  }
+}
+
+.nest-menu .el-submenu>.el-submenu__title,
+.el-submenu .el-menu-item {
+  background-color: #f9fafc !important;
+  color: #333 !important;
+  &:hover {
+    i[class^=icon-]{ 
+      color: $mainHeaderBg !important;
+    }
+    // background: rgb(94, 188, 229) !important; 
+    color: $mainHeaderBg !important;
+  
+  }
+}
+.el-menu-item.is-active {
+  // background: rgb(94, 188, 229) !important; 
+  color: $mainHeaderBg !important;
+}
+.el-submenu__title{
+  color: #000 !important;
+  background-color: #eee !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+}

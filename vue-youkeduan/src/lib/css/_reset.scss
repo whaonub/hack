@@ -1,0 +1,43 @@
+@import "normalize";
+
+html {
+    color: #000;
+    background: #fff;
+}
+
+body {
+    font: 14px/1.5 "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ul, ol, li, pre,
+fieldset, legend, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+fieldset, img {
+    border: none;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+    color: #333333;
+}
+
+input:focus {
+    outline: none;
+}
+
+/*旧浏览器html新增的标签无法识别块状显示*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}

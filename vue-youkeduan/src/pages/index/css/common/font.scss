@@ -1,0 +1,57 @@
+@import '../function.scss';
+.normal { font-weight: normal; }
+.b { font-weight: bold; }
+
+@for $i from 1 to 9 {
+    .fw#{$i}{
+        font-weight: 100* $i
+    }
+}
+
+@for $i from 1 to 100 {
+    .f-#{$i} {
+        font-size: rem($i);
+    };
+    .lh-#{$i}{
+        line-height: rem($i);
+    }
+}
+
+
+.light-silver{
+    color:rgb(152,152,152);
+}
+.golden{
+    color: rgb(228,204,161);
+
+}
+.white{
+    color:#fff;
+}
+.black{
+    color:#000;
+}
+
+.block333{
+    color:#333;
+}
+.color-666{
+    color:#666;
+}
+.clr-9{
+    color:#999;
+}
+.red{
+    color: #f56c6c;
+}
+
+//text
+.tc{
+    text-align: center;
+}
+.overflow-auto{
+    overflow: auto
+}
+.overflow-hidden{
+    overflow: hidden;
+}

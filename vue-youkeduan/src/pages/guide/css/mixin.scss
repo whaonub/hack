@@ -1,0 +1,47 @@
+@mixin m-border($direction : '', $color : #e1e1e1) {
+    position: relative;
+    z-index: 0;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 200%;
+        height: 200%;
+        transform-origin: top left;
+        transform: scale(.5, .5);
+        box-sizing: border-box;
+        @if $direction == 'a' {
+            border: solid 1px $color;
+        } @else if $direction == 't' {
+            border-top: solid 1px $color;
+        } @else if $direction == 'b' {
+            border-bottom: solid 1px $color;
+        } @else if $direction == 'l' {
+            border-left: solid 1px $color;
+        } @else if $direction == 'r' {
+            border-right: solid 1px $color;
+        } @else {
+            border: none;
+        }
+    }
+}
+
+@mixin m-tag($tag, $size, $color : #fff) {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: $tag;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5) translate(-100%, -100%);
+        color: $color;
+        font-size: rem2($size);
+        text-align: center;
+    }
+}

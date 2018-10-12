@@ -1,0 +1,11 @@
+//公共函数
+
+@function rem($num) { //px转换为rem（100px = 1rem）
+    $scale: 100;
+    @return $num/$scale + rem;
+}
+
+@function rem2($num) { //px转换为rem（100px = 1rem）
+    $scale: 100;
+    @return $num / $scale * 2 + rem;
+}

@@ -1,0 +1,31 @@
+@import "function";
+#app {
+    position: relative;
+    width: rem(750);
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.mt-20 {
+    margin-top: rem(20);
+}
+
+.mt-30 {
+    margin-top: rem(30);
+}
+
+.mb-20 {
+    margin-bottom: rem(20);
+}
+
+.fz-32 {
+    font-size: rem(32);
+}
+
+//单行多余省略
+.omit {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

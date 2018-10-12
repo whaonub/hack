@@ -1,0 +1,14 @@
+.filter-container {
+    font-size: 14px;
+    color: #333;
+    .filter-item {
+        padding: 8px 20px;
+        margin-bottom: 0!important;
+    }
+    .el-input {
+        padding-left: 0;
+    }
+    .el-input__inner {
+        height: 30px;
+    }
+}

@@ -1,0 +1,38 @@
+@import '../function.scss';
+@for $i from 1 to 500 {
+    .mt-#{$i} {
+        margin-top: rem($i);
+    }
+    ;
+    .mb-#{$i} {
+        margin-bottom: rem($i);
+    }
+    ;
+    .ml-#{$i} {
+        margin-left: rem($i);
+    }
+    ;
+    .mr-#{$i} {
+        margin-right: rem($i);
+    }
+    ;
+    .pt-#{$i} {
+        padding-top: rem($i);
+    }
+    ;
+    .pb-#{$i} {
+        padding-bottom: rem($i);
+    }
+    ;
+    .pl-#{$i} {
+        padding-left: rem($i);
+    }
+    ;
+    .pr-#{$i} {
+        padding-right: rem($i);
+    }
+    ;
+    .pa-#{$i} {
+        padding: rem($i);
+    }
+}
