@@ -1,0 +1,12 @@
+//query 获取地址栏参数
+export const getQueryString = name => { //如：http://www.baidu.com/?tab=2  →  getQueryString('tab') →   2;
+  let href = document.location.href;
+  let string = href.substring(href.indexOf('?') + 1);
+  let oArr = {};
+  let arr = string.split('&');
+  for (let i = 0; i < arr.length; i++) {
+    let newArr = arr[i].split('=');
+    oArr[newArr[0]] = newArr[1];
+  }
+  return oArr[name] ? decodeURIComponent(oArr[name]) : '';
+}
