@@ -1,0 +1,31 @@
+/**
+ * 获取元素的offset
+ */
+export const offset = (el) => {
+  var left = 0
+  var top = 0
+  while (el) {
+    left += el.offsetLeft
+    top += el.offsetTop
+    el = el.offsetParent
+  }
+  return {
+    left: left,
+    top: top,
+    el: el
+  }
+}
+
+/**
+ * 元素滚动方法
+ */
+export const scrollToElement = function (el, delay = 20, rootEl = "wrap") {
+  let wrapper = this.$refs[rootEl]
+  if (!wrapper || !el) {
+    return
+  }
+  let pos = offset(el)
+  let wrapperOffset = offset(wrapper)
+  pos.top -= wrapperOffset.top
+  wrapper.scrollTop = pos.top
+}
