@@ -1,0 +1,36 @@
+/**
+ * 通过毫秒获取格式化日期
+ * @param ms 毫秒
+ * @param type 日期类型 1：年 2：年月...
+ * @returns {string}
+ */
+export const formartDate = (ms, type) => {
+  if (typeof ms !== 'number') {
+    return
+  }
+  let date = new Date(ms)
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+
+  let hours = date.getHours() > 9 ? date.getHours() : `0${date.getHours()}`
+  let min = date.getMinutes() > 9 ? date.getMinutes() : `0${date.getMinutes()}`
+  let sec = date.getSeconds() > 9 ? date.getSeconds() : `0${date.getSeconds()}`
+
+  switch (type) {
+    case 1:
+      return `${year}`;
+    case 2:
+      return `${year}/${month}`;
+    case 3:
+      return `${year}/${month}/${day}`;
+    case 4:
+      return `${year}/${month}/${day} ${hours}`
+    case 5:
+      return `${year}/${month}/${day} ${hours}:${min}`
+    case 6:
+      return `${year}/${month}/${day} ${hours}:${min}:${sec}`
+    default:
+      return `${year}/${month}/${day} ${hours}:${min}`
+  }
+}
