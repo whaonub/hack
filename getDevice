@@ -1,0 +1,20 @@
+//获取访问的设备信息
+export const getDevice = () => {
+  let u = navigator.userAgent,
+    app = navigator.appVersion;
+  let isAndroid = u.indexOf("Android") > -1 || u.indexOf("Linux") > -1;
+  let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+  let isIphoneX = /iPhoneX/.test(u);
+  if (isiOS && screen.height == 812 && screen.width == 375) {
+    return "iPhoneX"
+  }
+  if (isAndroid) {
+    return "android";
+  } else if (isIphoneX) {
+    return "iPhoneX";
+  } else if (isiOS) {
+    return "ios";
+  } else {
+    return "web";
+  }
+};
