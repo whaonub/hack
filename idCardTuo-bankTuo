@@ -1,0 +1,26 @@
+//身份证脱敏
+export const idCardTuo = (str) => {
+  //console.log(idCardTuo('429004199409173672'));
+  if (typeof str === 'string') {
+    let ruten = str.substring(0, str.length - 4); //提取字符串下标之间的字符。
+    let replace = '';
+    for (let i = 0; i < ruten.length; i++) {
+      replace += '*'
+    }
+    return str.replace(ruten, replace); //字符串中用字符替换另外字符，或替换一个与正则表达式匹配的子串。
+  }
+}
+
+
+//银行脱敏
+export const bankTuo = (str) => {
+  if (typeof str === 'string') {
+    let ruten = str.substring(6, str.length - 4); //提取字符串下标之间的字符。
+    let replace = '';
+    for (let i = 0; i < ruten.length; i++) {
+      replace += '*'
+    }
+    return str.replace(ruten, replace); //字符串中用字符替换另外字符，或替换一个与正则表达式匹配的子串。
+  }
+
+}
